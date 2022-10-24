@@ -11,21 +11,27 @@ string s;
 void solve()
 {
     cin >> n;
-    cin >> s;
-    int cnt = 0;
+    int a[n];
+    int idx1 = n % 2 == 0 ? n / 2 : n / 2 + 1;
+    int idx2 = n;
     fr1
     {
-        if (cnt < 0)
-            cnt = 0;
-        if (s[i] == 'Q')
-            cnt++;
+        if (i % 2)
+        {
+            a[i] = idx2;
+            idx2--;
+        }
         else
-            cnt--;
+        {
+            a[i] = idx1;
+            idx1--;
+        }
     }
-    if (cnt > 0)
-        cout << "No" << endl;
-    else
-        cout << "Yes" << endl;
+    fr1
+            cout
+        << a[i] << ' ';
+
+    cout << '\n';
 }
 
 int main()
